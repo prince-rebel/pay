@@ -3,7 +3,23 @@ import {Image, View, Text ,SafeAreaView,StyleSheet,TouchableOpacity,ScrollView,F
 import { navigate } from '../RootNavigation';
 import { Icon } from 'react-native-elements'
 import Header from '../header'
+import { Chart, Line, Area, HorizontalAxis, VerticalAxis } from 'react-native-responsive-linechart'
 
+const info=[
+    { x: -2, y: 15 },
+    { x: -1, y: 10 },
+    { x: 0, y: 12 },
+    { x: 1, y: 7 },
+    { x: 2, y: 6 },
+    { x: 3, y: 8 },
+    { x: 4, y: 10 },
+    { x: 5, y: 8 },
+    { x: 6, y: 12 },
+    { x: 7, y: 14 },
+    { x: 8, y: 12 },
+    { x: 9, y: 13.5 },
+    { x: 10, y: 18 },
+]
 
 
 const  Day= [
@@ -88,6 +104,55 @@ export default function tableau() {
                                 </ScrollView>
                            </View>
                            <View>
+                           {/* <Chart
+                                style={{ height: 200, width: '100%' }}
+                                data={info}
+                                padding={{ left: 40, bottom: 20, right: 20, top: 20 }}
+                                xDomain={{ min: -2, max: 10 }}
+                                yDomain={{ min: 0, max: 20 }}>
+                                
+                                <VerticalAxis tickCount={11} theme={{ labels: { formatter: (v) => v.toFixed(2) } }} />
+                                <HorizontalAxis tickCount={5} />
+                                <Area theme={{ gradient: { from: { color: '#ffa502' }, to: { color: '#ffa502', opacity: 0.4 } }}} />
+                                <Line theme={{ stroke: { color: '#ffa502', width: 5 }, scatter: { default: { width: 4, height: 4, rx: 2 }} }} />
+
+
+                            </Chart> */}
+                            
+                                <Chart
+                                        style={{ height: 200, width: '100%' }}
+                                        data={info}
+                                        padding={{ left: 40, bottom: 20, right: 20, top: 20 }}
+                                        xDomain={{ min: 0, max: 10 }}
+                                        yDomain={{ min: 0, max: 20 }}
+                                        viewport={{ size: { width: 5 } }}
+                                        >
+                                      <VerticalAxis
+                                        tickValues={[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]}
+                                        theme={{
+                                        axis: { stroke: { color: '#ffa502', width: 2 } },
+                                        ticks: { stroke: { color: '#ffa502', width: 2 } },
+                                        labels: { formatter: (v) => v.toFixed(2) },
+                                        }}/>
+
+                                        <HorizontalAxis
+                                            tickValues={[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]}
+                                            theme={{
+                                            axis: { stroke: { color: '#ffa502', width: 2 } },
+                                            ticks: { stroke: { color: '#ffa502', width: 2 } },
+                                            labels: { label: { rotation: 50 }, formatter: (v) => v.toFixed(1) },
+                                            }}
+                                        />
+                                        <Line
+                                       
+                                            theme={{
+                                            stroke: { color: 'red', width: 2 },
+                                            }}
+                                            smoothing="cubic-spline"/>
+                                        <Area theme={{ gradient: { from: { color: '#ffa502', opacity: 0.4 }, to: { color: '#ffa502', opacity: 0.4 } } }} smoothing="cubic-spline" />
+                                        
+                                    </Chart>
+
                           
                            </View>
                            <View>
@@ -108,7 +173,7 @@ export default function tableau() {
                                     <View style={{flexDirection:'row'}}>
                                               <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                                                     <TouchableOpacity onPress={() =>{{}}}style={styles.appButtonContainer }>
-                                                        <Text style={styles.appButtonText}>Dépenses</Text>
+                                                        <Text style={{fontSize: 18,color: "#fff", alignSelf: "center", fontWeight:'bold'}}>Dépenses</Text>
                                                         </TouchableOpacity>
                                                     <TouchableOpacity onPress={() =>{{}}}style={styles.appButtonContainer }>
                                                         <Text style={styles.appButtonText}>Rechargements</Text>
@@ -176,6 +241,7 @@ export default function tableau() {
          fontSize: 16,
          color: "#fff",
          alignSelf: "center",
+         
         
        },
 })
