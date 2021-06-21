@@ -67,7 +67,7 @@ const App =()=> {
 
 
       <NavigationContainer ref={navigationRef}>
-        <Stack.Navigator initialRouteName="Rechargement" headerMode="none">
+        <Stack.Navigator initialRouteName="DrawerNavigator" headerMode="none">
             <Stack.Screen name="SplashScreen" component={SplashScreen} />
             <Stack.Screen name="screen2" component={screen2} />               
             <Stack.Screen name="screen3" component={screen3} />     
