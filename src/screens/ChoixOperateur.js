@@ -1,37 +1,39 @@
 import React from 'react'
 import {StyleSheet, View, SafeAreaView,Text ,Image,ScrollView,TouchableOpacity} from 'react-native'
 import { Icon } from 'react-native-elements'
-import Header from './header'
+import { Divider } from 'react-native-elements'
 import num from './num'
 
 export default function ChoixOperateur({navigation}) {
     return (
         <SafeAreaView style={styles.container}>
-            <View style={{width:400,height:130,paddingTop:15}}>
-                <Header/>
-                </View>
-            <ScrollView  showsVerticalScrollIndicator={false} style={{marginLeft:25}}>
-                <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <View style={{flexDirection:'row',marginTop:20}}> 
-                        <Icon name="arrow-back" size={25}  style={{marginLeft:5,paddingTop:5}}/>    
-                        <Text style={{paddingTop:10,fontWeight:'bold',fontSize:17,marginLeft:30}}>Recharger mon compte</Text>    
+           
+            <ScrollView  showsVerticalScrollIndicator={false} >
+              
+                    <View style={{flexDirection:'row',marginTop:20 ,backgroundColor:'#0070C0',height:60,marginTop:30}}> 
+                    <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <Icon name="arrow-back" size={35} color="white"  style={{paddingTop:10}} />    
+                    </TouchableOpacity>  
+                        <Text style={{paddingTop:15,fontSize:17,marginLeft:45,textAlign:'center',color:'white'}}>Recharger mon compte</Text>  
+                   
                     </View>
-                </TouchableOpacity>
+              
 
                 <TouchableOpacity onPress={() => navigation.navigate('num')}>
                 <View style={styles.operator}>
                     <Image source={require('../../assets/mtn.png')} style={{width:60,height:60,marginLeft:15}}/>
-                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:20}}>MTN Mobile Money</Text>
-                    <Icon name="chevron-right" size={40}  style={{marginLeft:30,paddingTop:8}}/>
+                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:14}}>MTN Mobile Money</Text>
+                    <Icon name="chevron-right" size={25}  style={{marginLeft:100,paddingTop:19}}/>
                 </View>
                 </TouchableOpacity>
+                <Divider orientation="horizontal" />
 
                 <TouchableOpacity onPress={() => navigation.navigate('num')}>
                 <View style={styles.operator}>
                
                     <Image source={require('../../assets/IconOrange.png')} style={{width:60,height:60,marginLeft:15}}/>
-                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:20}}>Orange Money</Text>
-                    <Icon name="chevron-right" size={40}  style={{marginLeft:75,paddingTop:8}}/>
+                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:14}}>Orange Money</Text>
+                    <Icon name="chevron-right" size={25}  style={{marginLeft:125,paddingTop:19}}/>
                 </View>
                 </TouchableOpacity>
               
@@ -40,8 +42,8 @@ export default function ChoixOperateur({navigation}) {
                     
 
                         <Image source={require('../../assets/moov.png')} style={{width:60,height:60,marginLeft:15}}/>
-                        <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:20}}>Moov Money</Text>
-                        <Icon name="chevron-right" size={40}  style={{marginLeft:85,paddingTop:8}}/>
+                        <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:14}}>Moov Money</Text>
+                        <Icon name="chevron-right" size={25}  style={{marginLeft:135,paddingTop:19}}/>
 
                    
                 </View>
@@ -50,30 +52,30 @@ export default function ChoixOperateur({navigation}) {
                 <TouchableOpacity onPress={() => navigation.navigate('num')}>
                 <View style={styles.operator}>
                     <Image source={require('../../assets/banque.png')} style={{width:60,height:60,marginLeft:15}}/>
-                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:20}}>Virement Bancaire</Text>
-                    <Icon name="chevron-right" size={40}  style={{marginLeft:40,paddingTop:8}}/>
+                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:14}}>Virement Bancaire</Text>
+                    <Icon name="chevron-right" size={25}  style={{marginLeft:100,paddingTop:19}}/>
                 </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('num')}>
                 <View style={styles.operator}>
                     <Image source={require('../../assets/Capture-removebg-preview.png')} style={{width:60,height:60,marginLeft:15}}/>
-                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:20}}>Versement Open Pay</Text>
-                    <Icon name="chevron-right" size={40}  style={{marginLeft:18,paddingTop:8}}/>
+                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:14}}>Versement Open Pay</Text>
+                    <Icon name="chevron-right" size={25}  style={{marginLeft:80,paddingTop:19}}/>
                 </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('num')}>
                 <View style={styles.operator}>
                     <Image source={require('../../assets/unnamed.png')} style={{width:60,height:60,marginLeft:15}}/>
-                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:20}}>Visa</Text>
-                    <Icon name="chevron-right" size={40}  style={{marginLeft:170,paddingTop:8}}/>
+                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:14}}>Visa</Text>
+                    <Icon name="chevron-right" size={25}  style={{marginLeft:180,paddingTop:19}}/>
                 </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => navigation.navigate('num')}>
                 <View style={styles.operator}>
                     <Image source={require('../../assets/MasterCard.png')} style={{width:60,height:60,marginLeft:15}}/>
-                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:20}}>Master Card</Text>
-                    <Icon name="chevron-right" size={40}  style={{marginLeft:90,paddingTop:8}}/>
+                    <Text style={{paddingTop:19,marginLeft:10,fontWeight:'bold',fontSize:14}}>Master Card</Text>
+                    <Icon name="chevron-right" size={25}  style={{marginLeft:130,paddingTop:19}}/>
                 </View>
                 </TouchableOpacity>
             </ScrollView>
@@ -87,12 +89,11 @@ const styles=StyleSheet.create({
     operator:{
         flex:1,
         flexDirection:'row',
-        marginTop:15,
+        marginTop:2,
         paddingTop:10,
         paddingBottom:10,
         backgroundColor:'white',
         borderRadius:10,
-        width:350,
         shadowColor: "#c4bebe",
         shadowOpacity: 0.6,
         shadowRadius: 7,

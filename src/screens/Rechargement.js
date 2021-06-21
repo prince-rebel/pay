@@ -9,7 +9,7 @@ import { BallIndicator,
     SkypeIndicator,
     UIActivityIndicator,
     WaveIndicator,}from 'react-native-indicators';
-    import Header from './header'
+
     import Verification from './verification'
     
 
@@ -19,7 +19,7 @@ export default function Rechargement({navigation}) {
       },7000);
     return (
         <SafeAreaView >
-                <View style={{width:400,height:120,marginTop:10}}><Header/></View>
+               
             <ScrollView  showsVerticalScrollIndicator={false}>
                 <View style={styles.scroll}>
                     <Text style={{marginTop:25,fontWeight:'bold',fontSize:19}}>Rechargement en cours</Text>
@@ -39,6 +39,7 @@ const styles=StyleSheet.create({
         flex:1,
         justifyContent:'center',
         alignItems:'center',
+        marginTop:50
     },
     img:{
 

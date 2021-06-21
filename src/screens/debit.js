@@ -1,23 +1,24 @@
 import React from 'react'
 import { View, Text,StyleSheet,ScrollView,Image ,TouchableOpacity,SafeAreaView,TextInput} from 'react-native'
 import { Icon } from 'react-native-elements'
-import Header from './header'
+
 import Rechargement from './Rechargement'
 
 export default function debit({navigation}) {
     return (
         <SafeAreaView style={{}}>
-                <View style={{width:400,height:150,marginTop:10}}>
-                    <Header/>
-                </View>
+               
             <ScrollView>
                 
-            <View style={{flexDirection:'row'}}> 
-            <TouchableOpacity onPress={() =>navigation.goBack()}>
-                 <Icon name="arrow-back" size={25}  style={{marginLeft:15,paddingTop:10}}/>  
-                 </TouchableOpacity>
-                 <View style={{flex:1,justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
-                 <Image source={require('../../assets/Capture-removebg-preview.png')} style={{width:50,height:50}}/>
+            <View > 
+                    <View style={{flexDirection:'row', marginTop:20 ,backgroundColor:'#0070C0',height:60,marginTop:30,paddingBottom:10}}>
+                        <TouchableOpacity onPress={() =>navigation.goBack()}>
+                        <Icon name="arrow-back" size={25} color='white' style={{marginLeft:15,paddingTop:16}}/>  
+                        </TouchableOpacity>
+                        <Text style={{paddingTop:15,fontSize:17,marginLeft:45,textAlign:'center',color:'white'}}>Validation de la transaction</Text>  
+                    </View>
+                 <View style={{justifyContent:'center',alignItems:'center',flexDirection:'column',marginTop:30}}>
+                 <Image source={require('../../assets/Capture-removebg-preview.png')} style={{width:80,height:80}}/>
                  <Text style={{marginTop:15,fontWeight:'bold'}}>Débiter le numéro</Text>
                  <Text  style={{}}>0564436015</Text>
                  </View>

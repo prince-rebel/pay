@@ -1,17 +1,23 @@
 import React from 'react'
-import { View, Text , StyleSheet, Image,ScrollView,SafeAreaView} from 'react-native'
+import { View, Text , StyleSheet, Image,ScrollView,SafeAreaView,TouchableOpacity} from 'react-native'
 import { Divider } from 'react-native-elements'
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Header from './header'
-export default function information() {
+
+export default function information({navigation}) {
     return (
         <SafeAreaView>
-            <View style={{width:400,height:110,marginTop:10}}>
-                <Header/>
-            </View>
+               <View style={{flexDirection:'row',marginTop:20 ,backgroundColor:'#0070C0',height:60,marginTop:30}}> 
+                    <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <Ionicons name="arrow-back" size={25} color="white"  style={{paddingTop:10}} />    
+                    </TouchableOpacity>  
+                        <Text style={{paddingTop:15,fontSize:17,marginLeft:100,textAlign:'center',color:'white'}}>Details</Text>  
+                   
+                    </View>
+           
             <ScrollView>
 
                 <View style={styles.page}>
+             
                     <View style={styles.container}>
 
                         <View style={{justifyContent:'center',alignItems:'center',margin:25}}>

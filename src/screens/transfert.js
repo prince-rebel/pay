@@ -1,13 +1,13 @@
 import React from 'react'
 import {StyleSheet, View, SafeAreaView,Text ,Image,ScrollView,TouchableOpacity} from 'react-native'
 import { Icon } from 'react-native-elements'
-import Header from './header'
+
 import contact from './contact'
 
 export default function transfert({navigation}) {
     return (
         <SafeAreaView style={styles.container}>
-               <View style={{width:400,height:120,marginTop:10}}><Header/></View>
+            
             <ScrollView  showsVerticalScrollIndicator={false} style={{marginLeft:25}}>
             <TouchableOpacity onPress={()=> navigation.goBack()} >
                 <View style={{flexDirection:'row',marginTop:20}}> 

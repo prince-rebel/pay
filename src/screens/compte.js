@@ -1,7 +1,6 @@
 import React from 'react'
 import {StyleSheet, View, Text ,SafeAreaView,TouchableOpacity,FlatList,Image,ScrollView } from 'react-native'
 import {Icon} from 'react-native-elements';
-import Header from './header'
 import ChoixOperateur from './ChoixOperateur'
 import Transfer from './transfert'
 import information from './information'
@@ -107,10 +106,7 @@ const compte = ({navigation}) => {
    
     return (
         <SafeAreaView style={styles.container}>
-           <View style={{width:375,height:150,marginTop:10}}>
-           <Header/>
-           </View>
-           
+        
             <ScrollView  style={{width:'100%'}} showsVerticalScrollIndicator={false}>
            
                     <View style={styles.solde}>

@@ -19,9 +19,10 @@ import verification from './verification'
 import transfert from './transfert'
 import contact from './contact'
 import receveur from './receveur'
-import Header from './header'
+
 import tableau from './depenses/tableau'
 import information from './information'
+import tabNavigator from './tabNavigator';
 
 
 
@@ -33,7 +34,7 @@ export default function DrawerNavigator() {
     return (
         <>
               
-                <Drawer.Navigator drawerContent={props => <Content {...props}/>} initialRouteName='finger'>
+                <Drawer.Navigator drawerContent={props => <Content {...props}/>} initialRouteName='tabNavigator'>
                     <Drawer.Screen name="finger" component={finger}/>
                     <Drawer.Screen name="home1" component={home1}/>
                     <Drawer.Screen name="compte" component={compte}/>
@@ -46,7 +47,7 @@ export default function DrawerNavigator() {
                     <Drawer.Screen name="contact" component={contact}/>
                     <Drawer.Screen name="receveur" component={receveur}/>
                     <Drawer.Screen name="tableau" component={tableau}/>
-                    <Drawer.Screen name="Header" component={Header}/>
+                    <Drawer.Screen name="tabNavigator" component={tabNavigator}/>
                     <Drawer.Screen name="information" component={information}/>
                 </Drawer.Navigator>
               

@@ -3,7 +3,7 @@ import { View, Text ,SafeAreaView, StyleSheet,ScrollView,TouchableOpacity ,TextI
 import { Icon } from 'react-native-elements'
 import { navigate, navigationRef } from './RootNavigation';
 import receveur from './receveur'
-import Header from './header'
+
 
 
 
@@ -54,13 +54,13 @@ const  Donnee= [
   const Fat = ({ name, texte ,photo}) => (
     <View >
       <TouchableOpacity onPress={()=>navigate('receveur')} style={{flexDirection:'row',marginTop:20}}>
-      <Image source={photo} style={{width:60,height:60,marginBottom:10, borderRadius: 400/ 2}}/>
+      <Image source={photo} style={{width:50,height:50,marginBottom:10, borderRadius: 400/ 2}}/>
       <View style={{flexDirection:'column',marginLeft:15}}>
-      <Text style={{fontSize:17}}>{ name}</Text>
-      <Text style={{fontSize:16}}>{texte}</Text>
+      <Text style={{fontSize:15}}>{ name}</Text>
+      <Text style={{fontSize:15}}>{texte}</Text>
       </View>
-      <View style={{marginLeft:85}}>
-      <Icon  name="chevron-right"size={35} />
+      <View style={{marginLeft:'auto'}}>
+      <Icon  name="chevron-right"size={25} />
       </View>
       </TouchableOpacity>
 
@@ -75,17 +75,20 @@ export default function contact({navigation}) {
     
     return (
         <SafeAreaView>
-          <View style={{width:400,height:110,marginTop:10}}><Header/></View>
+              <View style={{flexDirection:'row',marginTop:30,backgroundColor:'#0070C0',height:60}}> 
+                            <TouchableOpacity onPress={() => navigation.goBack()}>
+                                <Icon name="arrow-back" size={25}  color= 'white' style={{marginLeft:5,paddingTop:5}}/>    
+                              </TouchableOpacity>
+                                <Text style={{paddingTop:10,fontSize:17,marginLeft:30,color:'white'}}>Sélectionnez le bénéficiaire</Text>    
+              </View> 
+                        
+       
             
             <ScrollView>
                 <View >
                 
-                    <TouchableOpacity onPress={() => navigation.goBack()}>
-                        <View style={{flexDirection:'row',marginTop:10}}> 
-                            <Icon name="arrow-back" size={25}  style={{marginLeft:5,paddingTop:5}}/>    
-                            <Text style={{paddingTop:10,fontWeight:'bold',fontSize:17,marginLeft:30}}>Sélectionnez le bénéficiaire</Text>    
-                        </View> 
-                        </TouchableOpacity>
+                  
+                        
                     <TouchableOpacity onPress={() =>navigationRef.navigate('Receveur')}>
                     <View style={styles.container}>
                       <View  style={styles.inputStyles}>

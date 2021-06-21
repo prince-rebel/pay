@@ -2,7 +2,7 @@ import React from 'react'
 import {Image, View, Text ,SafeAreaView,StyleSheet,TouchableOpacity,ScrollView,FlatList} from 'react-native'
 import { navigate } from '../RootNavigation';
 import { Icon } from 'react-native-elements'
-import Header from '../header'
+
 import { Chart, Line, Area, HorizontalAxis, VerticalAxis } from 'react-native-responsive-linechart'
 import information from '../information'
 
@@ -79,7 +79,6 @@ export default function tableau({navigation}) {
       );
     return (
         <SafeAreaView>
-            <View style={{width:400,height:110,marginTop:15}}><Header/></View>
 
             <ScrollView>
                     <View style={styles.solde}>

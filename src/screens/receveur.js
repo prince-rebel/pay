@@ -1,24 +1,26 @@
 import React from 'react'
 import { View, Text,StyleSheet,ScrollView,Image ,TouchableOpacity,SafeAreaView ,TextInput} from 'react-native'
 import { Icon } from 'react-native-elements'
-import Header from './header'
 
 
 export default function receveur({navigation}) {
     return (
         <SafeAreaView style={{}}>
-              <View style={{width:400,height:110,marginTop:10}}><Header/></View>
+            <View style={{flexDirection:'row',marginTop:20 ,backgroundColor:'#0070C0',height:60,marginTop:30}}> 
+                    <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <Icon name="arrow-back" size={25} color="white"  style={{paddingTop:15}} />    
+                    </TouchableOpacity>  
+                        <Text style={{paddingTop:15,fontSize:17,marginLeft:45,textAlign:'center',color:'white'}}>Transfère</Text>  
+                   
+                    </View>
         <ScrollView>
-        <View style={{flexDirection:'row',marginTop:25}}> 
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-             <Icon name="arrow-back" size={25}  style={{marginLeft:15,paddingTop:10}}/>  
-             </TouchableOpacity>
+        <View style={{flexDirection:'row',marginTop:70}}> 
              <View style={{flex:1,justifyContent:'center',alignItems:'center',flexDirection:'column',marginTop:10}}>
              <Image source={require('../../assets/ado.jpg')} style={{width:50,height:50}}/>
              <Text style={{marginTop:15,fontWeight:'bold'}}>A: papa Ado (7763252798)</Text>
              </View>
         </View>
-        <View style={{flexDirection:'row',marginTop:10}}> 
+        <View style={{flexDirection:'row',marginTop:50}}> 
            
              <Icon name="credit-card" size={30}  style={{marginLeft:15,paddingTop:10}}/> 
              <Text style={{paddingTop:15,fontSize:19,marginLeft:10}}>XXX-9850</Text> 

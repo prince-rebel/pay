@@ -2,13 +2,13 @@ import color from 'color'
 import React from 'react'
 import { View, Text,StyleSheet ,SafeAreaView,ScrollView ,TouchableOpacity} from 'react-native'
 import { Icon } from 'react-native-elements'
-import Header from './header'
+
 import tableau from './depenses/tableau'
 
 export default function verification({navigation}) {
     return (
         <SafeAreaView>
-                <View style={{width:400,height:120}}><Header/></View>
+               
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.container}>
                 <Text style={{marginTop:25,fontWeight:'bold',fontSize:19}}>vérification du rechargement</Text>
