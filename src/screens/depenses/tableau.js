@@ -4,6 +4,7 @@ import { navigate } from '../RootNavigation';
 import { Icon } from 'react-native-elements'
 import Header from '../header'
 import { Chart, Line, Area, HorizontalAxis, VerticalAxis } from 'react-native-responsive-linechart'
+import information from '../information'
 
 const info=[
     { x: -2, y: 15 },
@@ -70,9 +71,11 @@ const  Day= [
     </View>
   );
   
-export default function tableau() {
+export default function tableau({navigation}) {
     const renderItem1 = ({ item }) => (
+        <TouchableOpacity onPress={() => navigation.navigate('information')}>
         <TransDay name={item.name} texte={item.texte} photo={item.photo} prix={item.prix}/>
+        </TouchableOpacity>
       );
     return (
         <SafeAreaView>
@@ -225,7 +228,7 @@ export default function tableau() {
         width: 2}
     },
     appButtonContainer: {
-         backgroundColor: "'rgb(255, 165, 0)'",
+         backgroundColor: "#0070C0",
          borderRadius: 3,
          paddingVertical: 7,
          paddingHorizontal: 15,

@@ -11,8 +11,8 @@ export default function finger({navigation}) {
     <View style={Styles.monEcran}>
     
       <Image
-         style = {{ width: 200, height: 200, margin: 60 }}
-        source={require('../../assets/icon_Openpay_white.png')}
+         style = {{ width: 260, height: 250, margin: 60 }}
+        source={require('../../assets/Capture-removebg-preview.png')}
       />
       <Text style={{textAlign:'center'}}> Scanne ton empreinte pour te connecter</Text>
       <TouchableOpacity onPress={() => navigation.navigate('compte')}>

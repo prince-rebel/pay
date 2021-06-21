@@ -10,11 +10,13 @@ export default function content(props) {
     <DrawerContentScrollView {...props} contentContainerStyle={{paddingTop:0,marginTop:0}}>
        <View style={styles.drawerContent}>
             <View style={styles.userInfoSection}>
-              <View style={{borderBottomWidth: 1,borderBottomColor: 'white', width:500}}>
+              <View style={{borderBottomWidth: 1,borderBottomColor: 'white',width:500}}>
               <Image
-                style={{ width:500,
-                  height: 45,
-                  resizeMode: 'center',}}
+                style={{ width:130,
+                  height: 30,
+                  marginLeft:160,
+                  marginBottom:15
+                }}
                   source={require('../../assets/logo.png')}/>
               </View>
              <View style={{flexDirection:'row', }}>
@@ -81,9 +83,9 @@ export default function content(props) {
                 icon={({ color, size }) => (
                   <Icon
                     name='badge'
-                    color='rgb(255, 165, 0)' />
+                    color='#0070C0' />
                 )}
-                labelStyle={{color:'rgb(255, 165, 0)',marginLeft:-30}}
+                labelStyle={{color:'#0070C0',marginLeft:-30}}
                 label="Compte bonus"
                 onPress={() => {}}
               />
@@ -91,9 +93,9 @@ export default function content(props) {
                 icon={({ color, size }) => (
                   <Icon
                     name='star'
-                    color='rgb(255, 165, 0)' />
+                    color='#0070C0' />
                 )}
-                labelStyle={{color:'rgb(255, 165, 0)',marginLeft:-30}}
+                labelStyle={{color:'#0070C0',marginLeft:-30}}
                 label="Notez Open Pay"
                 onPress={() => {}}
               />
@@ -102,9 +104,9 @@ export default function content(props) {
                 icon={({ color, size }) => (
                   <Icon
                     name='event'
-                    color='rgb(255, 165, 0)' />
+                    color='#0070C0' />
                 )}
-               labelStyle={{color:'rgb(255, 165, 0)',marginLeft:-30}}
+               labelStyle={{color:'#0070C0',marginLeft:-30}}
                 label="Condition d'utilisation"
                 onPress={() => {}}
               />
@@ -112,9 +114,9 @@ export default function content(props) {
                 icon={({ color, size }) => (
                   <Icon
                     name='lock'
-                    color='rgb(255, 165, 0)' />
+                    color='#0070C0' />
                 )}
-                labelStyle={{color:'rgb(255, 165, 0)',marginLeft:-30}}
+                labelStyle={{color:'#0070C0',marginLeft:-30}}
                 label="Verouiller Open Pay"
                 onPress={() => {}}
               />
@@ -122,10 +124,10 @@ export default function content(props) {
               </Drawer.Section>
          
               <View style={{flex:1,alignContent:'center',alignItems:'center',paddingTop:5}}>
-                <Text style={{fontWeight:'bold',color:'rgb(255, 165, 0)',paddingTop:10}}>Gagnez jusqu'à 100.000 F CFA</Text>
-                <Paragraph style={{ textAlign:'center',color:'rgb(255, 165, 0)',paddingTop:10}}>Recevez 500 F CFA sur votre compte  Open Pay pour chaque utilisateur {"\n"}invité qui a un compte valide</Paragraph>
-                <Caption style={{color:'rgb(255, 165, 0)',paddingTop:10,fontWeight:'bold'}}>Votre code de parrainage</Caption>
-                <Caption style={{color:'rgb(255, 165, 0)', fontWeight:'bold'}}>IOJLFH</Caption>
+                <Text style={{fontWeight:'bold',color:'#0070C0',paddingTop:10}}>Gagnez jusqu'à 100.000 F CFA</Text>
+                <Paragraph style={{ textAlign:'center',color:'#0070C0',paddingTop:10}}>Recevez 500 F CFA sur votre compte  Open Pay pour chaque utilisateur {"\n"}invité qui a un compte valide</Paragraph>
+                <Caption style={{color:'#0070C0',paddingTop:10,fontWeight:'bold'}}>Votre code de parrainage</Caption>
+                <Caption style={{color:'#0070C0', fontWeight:'bold'}}>IOJLFH</Caption>
                 <TouchableOpacity  style={styles.appButtonContainer }>
                 <Text style={styles.appButtonText}>inviter vos amis</Text>
                 </TouchableOpacity>
@@ -152,7 +154,7 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingBottom:20,
     alignItems:'center',
-    backgroundColor:'rgb(255, 165, 0)'
+    backgroundColor:'#0070C0'
    
   },
   title: {
@@ -200,7 +202,7 @@ const styles = StyleSheet.create({
   },
   appButtonContainer: {
    elevation:8,
-    backgroundColor: 'rgb(255, 165, 0)',
+    backgroundColor: '#0070C0',
     borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 12,

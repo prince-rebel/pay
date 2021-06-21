@@ -2,7 +2,9 @@ import React from 'react'
 import { Image,StyleSheet, View, Text } from 'react-native'
 import { ImageBackground, SafeAreaView ,TouchableOpacity} from "react-native"
 import { KeycodeInput } from 'react-native-keycode'
-import compte from './compte.js'
+import compte from './compte'
+import * as RootNavigation from './RootNavigation';
+
 
 const home = ({navigation}) => {
     return (
@@ -15,14 +17,11 @@ const home = ({navigation}) => {
         source={require('../../assets/icon_Openpay_white.png')}
       />
       <Text style={{textAlign:'center', margin :20}}> Mon code PIN</Text>
-
           <KeycodeInput
           secureTextEntry={true}
            onComplete={(value) =>{
              if (value==="1234") {
-               navigation.navigate('compte')}else{
-                 alert("code pin incorrect")
-               }
+              RootNavigation.navigate('compte')}
               }
             }/>
                 

@@ -13,14 +13,14 @@ export default function num({navigation}) {
         <ScrollView  showsVerticalScrollIndicator={false} style={{marginLeft:25,marginTop:10}}>
         
             <View style={{flexDirection:'row',marginLeft:5}}> 
-            <TouchableOpacity onPress={() =>{{}}}>
+            <TouchableOpacity onPress={() =>navigation.goBack()}>
                  <Icon name="arrow-back" size={25}  style={{marginLeft:5,paddingTop:5}}/>  
                  </TouchableOpacity>  
                 <Text style={{paddingTop:10,fontWeight:'bold',fontSize:17,marginLeft:30}}>Recharger mon compte</Text>    
             </View>
             <TouchableOpacity onPress={() => navigation.navigate('Debit')}>
             <View style={styles.operator}>
-                     <Icon name="person-pin" color='rgb(255, 165, 0)' size={35}  style={{marginLeft:30,paddingTop:8}}/>
+                     <Icon name="person-pin" color='#0070C0' size={35}  style={{marginLeft:30,paddingTop:8}}/>
                     <View style={{flexDirection:'column'}}>
                     <Text style={{paddingTop:15,marginLeft:10,fontSize:16}}>Utiliser mon muméro</Text>
                     <Text style={{marginLeft:10,fontSize:14}}>0564436015</Text>
@@ -30,7 +30,7 @@ export default function num({navigation}) {
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Debit')}>
                 <View style={styles.operator}>
-                 <Icon name="person-add-alt-1" size={30} color='rgb(255, 165, 0)' style={{marginLeft:20,paddingTop:8}}/>
+                 <Icon name="person-add-alt-1" size={30} color='#0070C0' style={{marginLeft:20,paddingTop:8}}/>
                  <View style={{flexDirection:'column'}}>
                     <Text style={{paddingTop:10,marginLeft:10,fontSize:16}}>Ajouter un numéro de rechargement</Text>
                     <Text style={{marginLeft:10,fontSize:14}}>MTN Mobile Money</Text>

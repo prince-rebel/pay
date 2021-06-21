@@ -5,6 +5,10 @@ import { ScrollView } from 'react-native';
 import * as RootNavigation from './RootNavigation';
 import {DrawerActions} from '@react-navigation/native'
 import tableau from './depenses/tableau'
+import compte from './compte'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
+const Tab = createMaterialTopTabNavigator();
 
 
 export default function header({navigation}) {
@@ -14,9 +18,9 @@ export default function header({navigation}) {
         <SafeAreaView style={styles.container}>
             <ScrollView>
 
-            <View style={{backgroundColor:'rgb(255, 165, 0)'}} >
+            <View style={{backgroundColor:'#0070C0'}} >
                 <View style={{flexDirection:'row',justifyContent:'space-evenly', marginTop:10,marginLeft:-25}}>
-                <TouchableOpacity onPress={() =>RootNavigation.dispatch(DrawerActions.openDrawer())}>
+                <TouchableOpacity onPress={() =>RootNavigation.dispatch(DrawerActions.toggleDrawer())}>
                     <Icon
                     name='menu'
                     color='white' 
@@ -39,7 +43,7 @@ export default function header({navigation}) {
 
                 </View>
                 <View style={{flexDirection:'row',justifyContent:'space-evenly',marginTop:10}}>
-                <TouchableOpacity onPress={() => {{}}} >
+                <TouchableOpacity onPress={() => RootNavigation.navigate('compte')} >
                     <Icon
                     name='style'
                     color='white' 
@@ -69,22 +73,7 @@ export default function header({navigation}) {
 
                 </View>
 
-                {/* <View style={styles.header}>
-                    <Icon
-                    name='menu'
-                    color='black' 
-                    style={{marginRight:15,marginLeft:10}}/>
-                    <Image style={{width: 130,height: 25,flex:1,justifyContent:'center',alignItems:'center'}}
-                        source={require('../../assets/logo.png')}/>
-                        <Icon
-                    name='notifications'
-                    color='black' />
-                        <Icon
-                    name='question'
-                    color='black' />
-
-                </View> */}
-
+      
                 
 
             </View>
@@ -102,6 +91,7 @@ export default function header({navigation}) {
             </View> */}
       
         </ScrollView>
+      
         </SafeAreaView>
         </>
 
@@ -116,7 +106,7 @@ const styles=StyleSheet.create({
   header:{
       flex:1,
       flexDirection:'row',
-      backgroundColor:'rgb(255, 165, 0)',
+      backgroundColor:'#0070C0',
     
       
   },

@@ -20,9 +20,8 @@ import transfert from './transfert'
 import contact from './contact'
 import receveur from './receveur'
 import Header from './header'
-
-
 import tableau from './depenses/tableau'
+import information from './information'
 
 
 
@@ -48,6 +47,7 @@ export default function DrawerNavigator() {
                     <Drawer.Screen name="receveur" component={receveur}/>
                     <Drawer.Screen name="tableau" component={tableau}/>
                     <Drawer.Screen name="Header" component={Header}/>
+                    <Drawer.Screen name="information" component={information}/>
                 </Drawer.Navigator>
               
 

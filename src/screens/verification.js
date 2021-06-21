@@ -12,8 +12,8 @@ export default function verification({navigation}) {
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.container}>
                 <Text style={{marginTop:25,fontWeight:'bold',fontSize:19}}>vérification du rechargement</Text>
-                <Icon name="check-circle" size={200} color='rgb(255, 165, 0)' style={{marginLeft:5,paddingTop:5}}/>
-                <Text style={{marginTop:25,fontSize:30,textAlign:'center' ,color:'rgb(255, 165, 0)',fontWeight:'bold'}}>Transaction effectuée {"\n"}avec succès </Text> 
+                <Icon name="check-circle" size={200} color='#0070C0' style={{marginLeft:5,paddingTop:5}}/>
+                <Text style={{marginTop:25,fontSize:30,textAlign:'center' ,color:'#0070C0',fontWeight:'bold'}}>Transaction effectuée {"\n"}avec succès </Text> 
                 
                 <TouchableOpacity onPress={() => navigation.navigate('tableau')} style={styles.appButtonContainer }>
                 <Text style={styles.appButtonText}>Retourner au tableau de bord</Text>
@@ -32,7 +32,7 @@ export default function verification({navigation}) {
     },
     appButtonContainer: {
         elevation:8,
-         backgroundColor: "'rgb(255, 165, 0)'",
+         backgroundColor: "#0070C0",
          borderRadius: 5,
          paddingVertical: 10,
          paddingHorizontal: 12,

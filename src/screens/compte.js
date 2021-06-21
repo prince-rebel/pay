@@ -4,6 +4,7 @@ import {Icon} from 'react-native-elements';
 import Header from './header'
 import ChoixOperateur from './ChoixOperateur'
 import Transfer from './transfert'
+import information from './information'
 
 const AUTHORS = [
     {
@@ -95,12 +96,14 @@ const  Day= [
           
 
 const compte = ({navigation}) => {
+
     const renderItem = ({ item }) => (
         <AuthorInfo name={item.name} texte={item.texte} photo={item.photo}/>
       );
     const renderItem1 = ({ item }) => (
         <TransDay name={item.name} texte={item.texte} photo={item.photo} prix={item.prix}/>
       );
+      
    
     return (
         <SafeAreaView style={styles.container}>
@@ -120,7 +123,7 @@ const compte = ({navigation}) => {
                         <Icon 
                             name="add"
                             size={15}
-                            color="#FE642E"/>
+                            color="#0070C0"/>
                         <Text style={styles.text} >Ajouter de l'argent</Text>
                         </TouchableOpacity>
                         
@@ -128,7 +131,7 @@ const compte = ({navigation}) => {
                             <Icon 
                             name="forward"
                             size={15}
-                            color="#FE642E"/>
+                            color="#0070C0"/>
                         <Text style={styles.text}>Envoyer de l'argent</Text>
                         </TouchableOpacity>
                     </View>
@@ -137,7 +140,7 @@ const compte = ({navigation}) => {
                         <View style={{paddingRight:20,paddingLeft:12}}>
                         <Icon 
                         name="payment"
-                        color="#FE642E"
+                        color="#0070C0"
                         size={45}/>
                         </View>
                 
@@ -159,7 +162,7 @@ const compte = ({navigation}) => {
                         <Text>Mes badges</Text>
                         </View>
                         <View style={{paddingTop:15,marginLeft:'auto'}}>
-                        <Text style={{color:'rgb(255, 165, 0)'}}>Voir plus</Text>
+                        <Text style={{color:'#0070C0'}}>Voir plus</Text>
                         </View>
                         </View>
                         <View style={{alignItems:'center',marginTop:15}}>
@@ -169,7 +172,7 @@ const compte = ({navigation}) => {
                         <Text>Autres badge à gagner</Text>
                         </View>
                         <View style={{paddingTop:20,marginLeft:'auto'}}>
-                        <Text style={{color:'rgb(255, 165, 0)'}}>Voir plus</Text></View>
+                        <Text style={{color:'#0070C0'}}>Voir plus</Text></View>
                         </View>
                         <View style={{marginTop:25,marginLeft:20}}>
                         <FlatList
@@ -185,7 +188,7 @@ const compte = ({navigation}) => {
                         <Text style={{fontWeight:'bold',fontSize:15}}>Transactions</Text>
                         </View>
                         <View style={{paddingTop:15,marginLeft:'auto'}}>
-                        <Text style={{color:'rgb(255, 165, 0)'}}>Voir plus</Text>
+                        <Text style={{color:'#0070C0'}}>Voir plus</Text>
                         </View>
                         </View>
                       
@@ -276,7 +279,7 @@ const styles=StyleSheet.create({
        },
 
        text:{
-           color:'#FE642E',
+           color:'#0070C0',
        },
         
        depense:{

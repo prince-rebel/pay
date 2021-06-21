@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,StyleSheet,ScrollView,Image ,TouchableOpacity,SafeAreaView } from 'react-native'
+import { View, Text,StyleSheet,ScrollView,Image ,TouchableOpacity,SafeAreaView ,TextInput} from 'react-native'
 import { Icon } from 'react-native-elements'
 import Header from './header'
 
@@ -10,11 +10,11 @@ export default function receveur({navigation}) {
               <View style={{width:400,height:110,marginTop:10}}><Header/></View>
         <ScrollView>
         <View style={{flexDirection:'row',marginTop:25}}> 
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
              <Icon name="arrow-back" size={25}  style={{marginLeft:15,paddingTop:10}}/>  
              </TouchableOpacity>
              <View style={{flex:1,justifyContent:'center',alignItems:'center',flexDirection:'column',marginTop:10}}>
-             <Image source={require('../../assets/IconOrange.png')} style={{width:50,height:50}}/>
+             <Image source={require('../../assets/ado.jpg')} style={{width:50,height:50}}/>
              <Text style={{marginTop:15,fontWeight:'bold'}}>A: papa Ado (7763252798)</Text>
              </View>
         </View>
@@ -22,7 +22,7 @@ export default function receveur({navigation}) {
            
              <Icon name="credit-card" size={30}  style={{marginLeft:15,paddingTop:10}}/> 
              <Text style={{paddingTop:15,fontSize:19,marginLeft:10}}>XXX-9850</Text> 
-             <Text style={{paddingTop:15,fontSize:19,marginLeft:100}}>10000 F CFA</Text>        
+             <TextInput style={{paddingTop:15,fontSize:19,marginLeft:100}} placeholder='10000 F CFA'/>     
         </View>
         
         
@@ -43,7 +43,7 @@ export default function receveur({navigation}) {
 
     appButtonContainer: {
         elevation:8,
-         backgroundColor: 'rgb(255, 165, 0)',
+         backgroundColor: '#0070C0',
          borderRadius: 5,
          paddingVertical: 10,
          paddingHorizontal: 12,

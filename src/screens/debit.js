@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,StyleSheet,ScrollView,Image ,TouchableOpacity,SafeAreaView } from 'react-native'
+import { View, Text,StyleSheet,ScrollView,Image ,TouchableOpacity,SafeAreaView,TextInput} from 'react-native'
 import { Icon } from 'react-native-elements'
 import Header from './header'
 import Rechargement from './Rechargement'
@@ -13,11 +13,11 @@ export default function debit({navigation}) {
             <ScrollView>
                 
             <View style={{flexDirection:'row'}}> 
-            <TouchableOpacity onPress={() =>{{}}}>
+            <TouchableOpacity onPress={() =>navigation.goBack()}>
                  <Icon name="arrow-back" size={25}  style={{marginLeft:15,paddingTop:10}}/>  
                  </TouchableOpacity>
                  <View style={{flex:1,justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
-                 <Image source={require('../../assets/IconOrange.png')} style={{width:50,height:50}}/>
+                 <Image source={require('../../assets/Capture-removebg-preview.png')} style={{width:50,height:50}}/>
                  <Text style={{marginTop:15,fontWeight:'bold'}}>Débiter le numéro</Text>
                  <Text  style={{}}>0564436015</Text>
                  </View>
@@ -26,7 +26,7 @@ export default function debit({navigation}) {
                
                  <Icon name="credit-card" size={30}  style={{marginLeft:15,paddingTop:10}}/> 
                  <Text style={{paddingTop:15,fontSize:19,marginLeft:10}}>XXX-9850</Text> 
-                 <Text style={{paddingTop:15,fontSize:19,marginLeft:100}}>10000 F CFA</Text>        
+                 <TextInput style={{paddingTop:15,fontSize:19,marginLeft:100}} placeholder='10000 F CFA'/>    
             </View>
             <Text style={{marginLeft:15,fontSize:12}}>Solde actuel : 150.000 F CFA</Text> 
             <View style={{flexDirection:'row' ,marginTop:90}}>
@@ -54,7 +54,7 @@ export default function debit({navigation}) {
 
     appButtonContainer: {
         elevation:8,
-         backgroundColor: "'rgb(255, 165, 0)'",
+         backgroundColor: "#0070C0",
          borderRadius: 5,
          paddingVertical: 10,
          paddingHorizontal: 12,

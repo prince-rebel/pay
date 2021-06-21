@@ -12,7 +12,7 @@ import num from './src/screens/num'
 import { navigationRef } from './src/screens/RootNavigation';
 
 import contact from './src/screens/contact'
-import Header from './src/screens/header'
+import TabNavigator from './src/screens/tabNavigator'
 import Content from './src/screens/content'
 import Debit from './src/screens/debit'
 import Rechargement from './src/screens/Rechargement'
@@ -20,9 +20,8 @@ import Verification from './src/screens/verification'
 import Transfert from './src/screens/transfert'
 import receveur from './src/screens/receveur'
 import tableau from './src/screens/depenses/tableau'
-
-
-
+import information from './src/screens/information'
+import tabNavigator from './src/screens/tabNavigator'
 
 
 function SplashScreen({navigation}) {
@@ -68,7 +67,7 @@ const App =()=> {
 
 
       <NavigationContainer ref={navigationRef}>
-        <Stack.Navigator initialRouteName="SplashScreen" headerMode="none">
+        <Stack.Navigator initialRouteName="DrawerNavigator" headerMode="none">
             <Stack.Screen name="SplashScreen" component={SplashScreen} />
             <Stack.Screen name="screen2" component={screen2} />               
             <Stack.Screen name="screen3" component={screen3} />     
@@ -86,7 +85,8 @@ const App =()=> {
         <Stack.Screen name="contact" component={contact}/>
         <Stack.Screen name="receveur" component={receveur}/>
         <Stack.Screen name="tableau" component={tableau}/>
-        <Stack.Screen name="Header" component={Header}/>  
+        <Stack.Screen name="information" component={information}/>  
+        <Stack.Screen name="TabNavigator" component={TabNavigator}/>  
            
                 
         </Stack.Navigator>
