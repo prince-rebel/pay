@@ -95,6 +95,7 @@ export default function contact({navigation}) {
                         <Icon name='search' size={27}/>
                         <TextInput
                         placeholder="Nom, Numéro de téléphone"
+                        keyboardType="numeric"
                         style={{width:300,fontSize:15,marginLeft:15}}
                        
                         />                               
@@ -106,6 +107,7 @@ export default function contact({navigation}) {
                       <View  style={styles.inputStyles}>
                         <Icon name='dialpad' size={27} color='#0070C0'/>
                         <TextInput
+                        keyboardType="numeric"
                         onChangeText={queryText => handleSearch(queryText)}
                         placeholder="Saisir un Numero"
                         style={{width:300,fontSize:15,marginLeft:15}}

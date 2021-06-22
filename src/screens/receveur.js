@@ -24,7 +24,7 @@ export default function receveur({navigation}) {
            
              <Icon name="credit-card" size={30}  style={{marginLeft:15,paddingTop:10}}/> 
              <Text style={{paddingTop:15,fontSize:19,marginLeft:10}}>XXX-9850</Text> 
-             <TextInput style={{paddingTop:15,fontSize:19,marginLeft:100}} placeholder='10000 F CFA'/>     
+             <TextInput style={{paddingTop:15,fontSize:19,marginLeft:100}} placeholder='10000 F CFA' keyboardType="numeric" />     
         </View>
         
         

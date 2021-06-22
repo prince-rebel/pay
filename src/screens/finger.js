@@ -2,6 +2,7 @@ import React from 'react';
 import {Button,StyleSheet,Image, View, Text ,TouchableOpacity} from 'react-native';
 import home from './pin.js';
 import compte from './compte.js' ;
+import tabNavigator from './tabNavigator'
 
 
 
@@ -15,7 +16,7 @@ export default function finger({navigation}) {
         source={require('../../assets/Capture-removebg-preview.png')}
       />
       <Text style={{textAlign:'center'}}> Scanne ton empreinte pour te connecter</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('compte')}>
+      <TouchableOpacity onPress={() => navigation.navigate('tabNavigator')}>
         <Image
           style = {{ width: 75, height: 75, margin: 60 }}
           source={require('../../assets/010-empreinte-digitale-5.png')}

@@ -34,7 +34,7 @@ export default function DrawerNavigator() {
     return (
         <>
               
-                <Drawer.Navigator drawerContent={props => <Content {...props}/>} initialRouteName='tabNavigator'>
+                <Drawer.Navigator drawerContent={props => <Content {...props}/>} initialRouteName='finger'>
                     <Drawer.Screen name="finger" component={finger}/>
                     <Drawer.Screen name="home1" component={home1}/>
                     <Drawer.Screen name="compte" component={compte}/>

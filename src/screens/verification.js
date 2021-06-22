@@ -3,7 +3,7 @@ import React from 'react'
 import { View, Text,StyleSheet ,SafeAreaView,ScrollView ,TouchableOpacity} from 'react-native'
 import { Icon } from 'react-native-elements'
 
-import tabnavigator from './tabNavigator'
+import tabNavigator from './tabNavigator'
 
 export default function verification({navigation}) {
     return (
@@ -15,7 +15,7 @@ export default function verification({navigation}) {
                 <Icon name="check-circle" size={200} color='#0070C0' style={{marginLeft:5,paddingTop:5}}/>
                 <Text style={{marginTop:25,fontSize:30,textAlign:'center' ,color:'#0070C0',fontWeight:'bold'}}>Transaction effectuée {"\n"}avec succès </Text> 
                 
-                <TouchableOpacity onPress={() => navigation.navigate('tabnavigator')} style={styles.appButtonContainer }>
+                <TouchableOpacity onPress={() => navigation.navigate('tabNavigator')} style={styles.appButtonContainer }>
                 <Text style={styles.appButtonText}>Retourner au tableau de bord</Text>
                 </TouchableOpacity> 
                 </View>

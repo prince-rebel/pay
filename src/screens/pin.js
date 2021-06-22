@@ -4,6 +4,7 @@ import { ImageBackground, SafeAreaView ,TouchableOpacity} from "react-native"
 import { KeycodeInput } from 'react-native-keycode'
 import compte from './compte'
 import * as RootNavigation from './RootNavigation';
+import tabNavigator from './tabNavigator'
 
 
 const home = ({navigation}) => {
@@ -21,7 +22,7 @@ const home = ({navigation}) => {
           secureTextEntry={true}
            onComplete={(value) =>{
              if (value==="1234") {
-              RootNavigation.navigate('compte')}
+              RootNavigation.navigate('tabNavigator')}
               }
             }/>
                 
