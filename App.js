@@ -22,6 +22,7 @@ import receveur from './src/screens/receveur'
 import tableau from './src/screens/depenses/tableau'
 import information from './src/screens/information'
 import tabNavigator from './src/screens/tabNavigator'
+import Fingerprint  from './src/screens/fingerprint'
 
 
 function SplashScreen({navigation}) {
@@ -67,7 +68,7 @@ const App =()=> {
 
 
       <NavigationContainer ref={navigationRef}>
-        <Stack.Navigator initialRouteName="DrawerNavigator" headerMode="none">
+        <Stack.Navigator initialRouteName="Finger" headerMode="none">
             <Stack.Screen name="SplashScreen" component={SplashScreen} />
             <Stack.Screen name="screen2" component={screen2} />               
             <Stack.Screen name="screen3" component={screen3} />     
@@ -87,6 +88,7 @@ const App =()=> {
         <Stack.Screen name="tableau" component={tableau}/>
         <Stack.Screen name="information" component={information}/>  
         <Stack.Screen name="TabNavigator" component={TabNavigator}/>  
+        <Stack.Screen name="Fingerprint" component={Fingerprint}/>  
            
                 
         </Stack.Navigator>
