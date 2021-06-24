@@ -22,8 +22,6 @@ import receveur from './src/screens/receveur'
 import tableau from './src/screens/depenses/tableau'
 import information from './src/screens/information'
 import tabNavigator from './src/screens/tabNavigator'
-import Fingerprint  from './src/screens/fingerprint'
-
 
 function SplashScreen({navigation}) {
   setTimeout(()=>{
@@ -88,7 +86,6 @@ const App =()=> {
         <Stack.Screen name="tableau" component={tableau}/>
         <Stack.Screen name="information" component={information}/>  
         <Stack.Screen name="TabNavigator" component={TabNavigator}/>  
-        <Stack.Screen name="Fingerprint" component={Fingerprint}/>  
            
                 
         </Stack.Navigator>
