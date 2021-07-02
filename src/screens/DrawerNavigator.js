@@ -22,7 +22,7 @@ import receveur from './receveur'
 
 import tableau from './depenses/tableau'
 import information from './information'
-import tabNavigator from './tabNavigator';
+import TabNavigator from './tabNavigator'
 
 
 
@@ -47,7 +47,7 @@ export default function DrawerNavigator() {
                     <Drawer.Screen name="contact" component={contact}/>
                     <Drawer.Screen name="receveur" component={receveur}/>
                     <Drawer.Screen name="tableau" component={tableau}/>
-                    <Drawer.Screen name="tabNavigator" component={tabNavigator}/>
+                    <Drawer.Screen name="TabNavigator" component={TabNavigator}/>
                     <Drawer.Screen name="information" component={information}/>
                 </Drawer.Navigator>
               

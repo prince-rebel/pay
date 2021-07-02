@@ -3,6 +3,7 @@ import { View, Text ,SafeAreaView ,StyleSheet,ScrollView,Image ,TouchableOpacity
 import { Icon } from 'react-native-elements'
 
 import Debit from './debit'
+import Contact from './contact'
 
 export default function num({navigation}) {
     return (
@@ -28,7 +29,7 @@ export default function num({navigation}) {
                     <Icon name="chevron-right" size={30}  style={{marginLeft:80,paddingTop:8}}/>
                 </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Debit')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Contact')}>
                 <View style={styles.operator}>
                  <Icon name="person-add-alt-1" size={40} color='#0070C0' style={{marginLeft:20,paddingTop:8}}/>
                  <View style={{flexDirection:'column'}}>

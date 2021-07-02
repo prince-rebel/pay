@@ -1,54 +1,11 @@
+
 import React,{useEffect,useState} from 'react'
 import { View, Text ,SafeAreaView, StyleSheet,ScrollView,TouchableOpacity ,TextInput,FlatList,Image} from 'react-native'
 import { Icon } from 'react-native-elements'
 import { navigate, navigationRef } from './RootNavigation';
 import receveur from './receveur'
+import * as Contacts from 'expo-contacts';
 
-
-
-
-const  Donnee= [
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3',
-      name: 'Papa GBAGBO',
-      texte: '0777109379',
-      photo:require('../../assets/mtn.png'),
-    
-    },
-    {
-      id: '3ac68afc-48d3-a4f8-fbd91aa97f63',
-      name: 'Papa ADO',
-      texte: '0777109379',
-      photo:require('../../assets/ado.jpg'),
-  
-    },
-    {
-      id: '145571e29d72',
-      name: 'Papa BEDIE',
-      texte: '0777109379',
-      photo:require('../../assets/bedos.jpg'),
-    
-    },
-    {
-      id: '58694a0f-3da1',
-      name: 'Genl BOGOTA',
-      texte: '0777109379',
-      photo:require('../../assets/soro.jpg'),
-      
-    },
-    
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      name: 'Papa GBAGBO',
-      texte: '0777109379',
-      photo:require('../../assets/lg.png'),
-    
-    },
-    
-    
-   // ...lots of more authors and books go in here...
-  
-  ];
 
   
   const Fat = ({ name, texte ,photo}) => (
@@ -68,9 +25,25 @@ const  Donnee= [
   );
 
 export default function contact({navigation}) {
+  const [contacts, setContacts ] = useState([])
+  useEffect(() => {
+  (async () => {
+    const { status } = await Contacts.requestPermissionsAsync();
+    if (status === 'granted') {
+      const { data } = await Contacts.getContactsAsync({
+        fields: [Contacts.Fields.PhoneNumbers],
+      });
+
+      if (data.length > 0) {
+        setContacts(data)
+      }
+    }
+  })();
+}, []);
+
   
     const renderItem = ({ item }) => (
-        <Fat name={item.name} texte={item.texte} photo={item.photo}/>
+      <Fat name={item.name} texte={item.phoneNumbers ? item.phoneNumbers[0].number : ''} photo={item.Image ? item.Image[0]: require('../../assets/avatar.png')} />
       );
     
     return (
@@ -87,43 +60,43 @@ export default function contact({navigation}) {
             <ScrollView>
                 <View >
                 
-                  
-                        
-                    <TouchableOpacity onPress={() =>navigationRef.navigate('Receveur')}>
+
+                    
                     <View style={styles.container}>
                       <View  style={styles.inputStyles}>
                         <Icon name='search' size={27}/>
                         <TextInput
                         placeholder="Nom, Numéro de téléphone"
-                        keyboardType="numeric"
                         style={{width:300,fontSize:15,marginLeft:15}}
                        
                         />                               
                    </View>
                     </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigate('Receveur')}>
+               
+                   
                     <View style={styles.container}>
                       <View  style={styles.inputStyles}>
                         <Icon name='dialpad' size={27} color='#0070C0'/>
                         <TextInput
                         keyboardType="numeric"
-                        onChangeText={queryText => handleSearch(queryText)}
                         placeholder="Saisir un Numero"
+                        onChangeText ={e=>e? SetName(e):''}
                         style={{width:300,fontSize:15,marginLeft:15}}
                        
                         />     
-                        <Icon name='chevron-right' size={27}/>                          
+                         <TouchableOpacity onPress={() => navigate('Receveur')}>
+                        <Icon name='chevron-right' size={27}/>     
+                        </TouchableOpacity>                     
                    </View>
                     </View>
-                    </TouchableOpacity>
+                   
                   
                     <View style={{marginTop:25,marginLeft:20}}>
                         <Text>Mes contacts</Text>
-                    <FlatList
-                            data={Donnee}
-                            renderItem={renderItem} />                            
-                            </View>
+                      <FlatList
+                              data={contacts}
+                              renderItem={renderItem} />                            
+                    </View>
                         
                 </View>
             </ScrollView>
@@ -168,3 +141,5 @@ const styles=StyleSheet.create({
           
       }
 })
+
+    

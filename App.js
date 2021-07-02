@@ -21,7 +21,6 @@ import Transfert from './src/screens/transfert'
 import receveur from './src/screens/receveur'
 import tableau from './src/screens/depenses/tableau'
 import information from './src/screens/information'
-import tabNavigator from './src/screens/tabNavigator'
 
 function SplashScreen({navigation}) {
   setTimeout(()=>{
@@ -66,7 +65,7 @@ const App =()=> {
 
 
       <NavigationContainer ref={navigationRef}>
-        <Stack.Navigator initialRouteName="Finger" headerMode="none">
+        <Stack.Navigator initialRouteName="DrawerNavigator" headerMode="none">
             <Stack.Screen name="SplashScreen" component={SplashScreen} />
             <Stack.Screen name="screen2" component={screen2} />               
             <Stack.Screen name="screen3" component={screen3} />     
@@ -75,17 +74,17 @@ const App =()=> {
             <Stack.Screen name="compte" component={compte} />     
             <Stack.Screen name="content" component={Content} />     
             <Stack.Screen name="home" component={home}/>
-          <Stack.Screen name="ChoixOperateur" component={ChoixOperateur}/>
-          <Stack.Screen name="num" component={num}/>
-          <Stack.Screen name="Debit" component={Debit}/>
-          <Stack.Screen name="Rechargement" component={Rechargement}/>
-         <Stack.Screen name="Verification" component={Verification}/>
-        <Stack.Screen name="Transfert" component={Transfert}/>
-        <Stack.Screen name="contact" component={contact}/>
-        <Stack.Screen name="receveur" component={receveur}/>
-        <Stack.Screen name="tableau" component={tableau}/>
-        <Stack.Screen name="information" component={information}/>  
-        <Stack.Screen name="TabNavigator" component={TabNavigator}/>  
+            <Stack.Screen name="ChoixOperateur" component={ChoixOperateur}/>
+            <Stack.Screen name="num" component={num}/>
+            <Stack.Screen name="Debit" component={Debit}/>
+            <Stack.Screen name="Rechargement" component={Rechargement}/>
+            <Stack.Screen name="Verification" component={Verification}/>
+            <Stack.Screen name="Transfert" component={Transfert}/>
+            <Stack.Screen name="contact" component={contact}/>
+            <Stack.Screen name="receveur" component={receveur}/>
+            <Stack.Screen name="tableau" component={tableau}/>
+            <Stack.Screen name="information" component={information}/>  
+            <Stack.Screen name="TabNavigator" component={TabNavigator}/>  
            
                 
         </Stack.Navigator>
